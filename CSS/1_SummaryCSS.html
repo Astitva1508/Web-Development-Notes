@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Summary</title>
+    <style>
+        *{        /*This is Universal Selector*/
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+        /* Fonts in CSS */
+        .fonts{
+            font-family:'Courier New', Courier, monospace ;      /*Two ways,  either imported fonts or web safe fonts*/
+            font-size: 23px;
+            font-weight: bold;
+            font-style: italic;
+            line-height: 1.3em;
+        }
+        .colors {
+            color: red;  /*Color By Name */
+            background-color: rgb(23,43,12); /*Color By RGB Value */
+            border-color: #12ff43; /*Color by Hex Value, has a relationship with rgb color*/
+        }
+        .background{
+            background-color: aqua;
+            background-image: url();
+            background-repeat: no-repeat;
+            background-position: 34px 12px; 
+            /*x can be top bottom center and y can be right left center*/
+        }
+        .border {
+            border: 2px aliceblue solid ;  /*border-width border-color border-style */
+            /* border-width: 3px;
+            border-color:aliceblue;
+            border-style:solid; */
+            height: 100px;
+            width:25px;
+            border-radius: 11px;
+
+            border-top: 3px rgb(23, 32, 45) solid;
+            /* border-bottom: ;
+            border-left: ;
+            border-right: ; */
+
+            border-bottom-left-radius: 4px;
+            /* border-bottom-right-radius: 
+            border-top-left-radius: ;
+            border-top-right-radius: ; */
+        }
+
+        .boxmodel{     /* Content Padding Border Margin*/
+            background-color: aqua;
+            box-sizing: border-box; 
+            border: 8px solid #f0d409;
+            padding:25px ;
+            margin:3px;
+            width: 400px;
+            /* height: 100px; */
+            /* We can set padding (margin also)  for  top bottom left  right like this: 
+            1.
+            padding-top: ;
+            padding-bottom: ;
+            padding-right: ;
+            padding-left: ; 
+            2.
+            padding :top right bottom left; e.g.padding :2px 3px 1px;
+            3.
+            padding:top/bottom left/right;
+            4.
+            padding:; 
+            /* how do height,width and padding accomodate each other or  rather we have to accomodate them */
+        } 
+        .alignment {
+            float: left;
+            clear: both;
+        }
+        .text{
+            text-align: center; /*left right center justify*/ 
+        }
+    /* The next three are pseudo selectors */
+        a:hover{    /* Cursor le jaane par kya harkat hogi decided by hover*/
+            color: aqua;
+            background-color: #12ff43;
+        }
+
+        a:visited{   /*decides behaviour once link is visited*/
+            background-color:black;
+        }
+
+        a:active{
+            background-color: blanchedalmond;
+        }
+    /*Some Random Changes Applied to tags*/
+        .btn{
+            font-family: 'Segoe UI', Tahoma , Verdana, sans-serif;
+            font-weight: bold;
+            background-color: crimson;
+            padding:6px;
+            border: none;
+            cursor:pointer;
+            font-size: 13px;
+            border-radius: 4px;
+        }
+        a{
+            text-decoration: none;
+            color:#f0d409
+        }
+    </style>
+</head>
+<body>
+    <div class="first">
+        <h3>This is my first heading</h3><br>
+        <p id="first">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo consequuntur earum exercitationem vero minima aut, obcaecati inventore nisi, culpa doloremque corrupti reprehenderit totam at ex veniam minus, beatae rerum veritatis in perferendis quisquam sunt ad suscipit. Officia dicta dignissimos explicabo!
+        </p>
+    </div>
+    <div class="first">
+        <h3>This is my second heading</h3><br>
+        <p id="second">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo consequuntur earum exercitationem vero minima aut, obcaecati inventore nisi, culpa doloremque corrupti reprehenderit totam at ex veniam minus, beatae rerum veritatis in perferendis quisquam sunt ad suscipit. Officia dicta dignissimos explicabo!
+        </p>
+    </div>
+    <div class="first">
+        <h3>This is my third heading</h3><br>
+        <p id="third">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo consequuntur earum exercitationem vero minima aut, obcaecati inventore nisi, culpa doloremque corrupti reprehenderit totam at ex veniam minus, beatae rerum veritatis in perferendis quisquam sunt ad suscipit. Officia dicta dignissimos explicabo!
+        </p>
+        <a href="https://www.google.com/" class="btn">Read More</a>
+        <button class="btn">Contact Us</button>
+    </div>
+</body>
+</html>
+
+
+We can apply style to all tags present in HTML.(Be it Anchor Button)
+
+overflow: auto;
+list-style 
+display-inline 
+display block (can change its width)
+
+
+If you want to inline an element and still change its width,use inline block.This property enables us to set width and eat space only correspponding to width
+
+box sixing borderbox karne se jitni width di hai wahi rahegi including margin and padding.
+
+
+position-relative to move relative to itself par purani jagah vacant rah jaegi
+
+position-absolute to move relative to parent 
+
+position-fixed so that box never mmoves no matter wherever on page u are i.e relative to the browser window
+
+position-sticky
+
+To Center Align an element:
+Set width and display:block and then margin:auto;

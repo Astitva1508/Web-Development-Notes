@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ids and Classes in HTML</title>
+</head>
+<body>
+    <h3>Ids and CLasses in HTML</h3>
+    <div id="mainBox" class="redBg blackborder">
+        This is mainbox
+        <!-- id is identifier of div.No two elements can have same id.id is given to an element to uniquely identify it 
+        if you want to use same styling properties for more than one elements,then you define class for one element and use same class for all the other elements.
+        We can specify more than one classes 
+        whatever be defined inside that class is updated in the elemnts of that tag
+        -->
+    </div>
+
+    <!-- span.redbg gives class redbg to element span
+    span#subbox gives id subbox  to element span -->
+    <!-- . is for class and # is for id -->
+    <!-- emmet takes div tag as default -->
+
+    <!-- Creating Multiple Elements using Emmet: 
+    span.myclass.myclass2.myclass3 to add multiple classes
+    span.myclass.myclass2.myclass3*4 to add multiple span elements -->
+
+    <!-- Any class that you give should be already defined to have an impact on elements. -->
+    <span class="myclass myclass2 myclass3"></span> 
+    <span class="myclass myclass2 myclass3"></span><span class="myclass myclass2 myclass3"></span>
+</body>
+</html>

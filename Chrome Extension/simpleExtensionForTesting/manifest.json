@@ -1,0 +1,13 @@
+{
+    "name": "Resume Builder From Linkedin",
+    "version": "1.0.0",
+    "description": "latest resume of you",
+    "manifest_version": 3,
+    "author": "Astitva Dubey",
+    "optional_permissions": ["tabs","activeTab"],
+    "host_permissions": ["https://www.google.com/"],
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Resume Builder"
+    }
+}

@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+nav{
+    /* margin:auto; */
+    /* min-width: 100vw; */
+}
+nav{
+    display:flex;
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    justify-content:center;
+    /* flex-wrap: wrap; */
+}
+li{
+    list-style-type:none;
+}
+.sections li{
+    /* border:1px solid red; */
+    /* padding-left:1rem;
+    padding-right:1rem;*/
+    margin:auto 0.875rem; 
+}
+.socialmediaicons li{
+    /* border:1px solid red; */
+    /* padding-left:0.5rem;
+    padding-right:0.5rem;*/
+    margin:auto 0.5rem; 
+}
+a{
+    text-decoration: none;
+}
+.navtitle{
+    /* border:3px solid red; */
+    width:33%;
+    /* align-self: flex-start; */
+    /* margin:auto 1.25rem;
+    padding-right:0.75rem;
+    padding-left:0.75rem; */
+}
+.sections{
+    /* align-self:center; */
+    font-size: 1rem;
+    width:33%;
+    /* border:3px solid red; */
+    display:flex;
+    flex-direction: row;
+    /* margin:auto 1.25rem;
+    padding-right:0.75rem;
+    padding-left:0.75rem; */
+}
+.socialmediaicons{
+    width:33%;
+    /* align-self: flex-end; */
+    /* border:3px solid red; */
+    display:flex;
+    justify-content: flex-end;
+    margin-right:2rem;
+    /* margin:auto 1.25rem;
+    padding-right:0.75rem;
+    padding-left:0.75rem; */
+}
+
+@media screen and (max-width:800px){
+    nav{
+        flex-direction: column;
+    }
+    .nav-toggle{
+        display:visible;
+        border:3px solid red;
+        float:right;
+        margin-right:2rem;
+        margin-top:1rem;
+        /* float:right; */
+    }
+    /* .nav-header{
+        display:block;
+        width:100vw;
+    } */
+    .sections li{
+        border:1px solid black;
+        /* overflow:hidden; */
+        box-shadow: 0.5rem rgb(84, 77, 77);
+        /* width:80%; */
+        margin:auto 0.875rem;
+    }
+    .sections{
+        display:block;
+        width:100%;
+        padding-right:1rem;
+        color:aqua;
+        text-align:center;
+        font-size:1.5rem;
+        /* border:1px solid black; */
+        /* overflow:hidden; */
+        /* box-shadow: 0.5rem rgb(84, 77, 77); */
+    }
+    .socialmediaicons{
+        display:none;
+    }
+    .navtitle{
+        display:block;
+        width:100vw;
+    }
+}
+
+@media screen and (min-width:800px){
+    .nav-toggle{
+        display:none;
+    }
+
+}

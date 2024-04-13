@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="gfgsurveyform.css">
+</head>
+<body>
+    <h2>Geeks For Geeks Survey Form</h2>
+    <form action="backend.php">
+        <div>
+            <label for="Name">Name <br></label>
+            <input type="text" name="MyName" id="Name" value="Enter your Name" required>
+        </div>
+        <div>
+            <label for="Email">Email <br></label>
+            <input type="email" name="MyEmail" id="Email" value="Enter your Email" required>
+        </div>
+        <div>
+            <label for="Age">Age <br></label>
+            <input type="number" name="MyAge" id="Age" value="Enter your Age" required>
+        </div>
+        <div>
+            <label for="WhoamI">Which option best describes you?<br></label>
+            <select name="WhoamI" id="WhoamI">
+                <option value="Student" selected>Student</option>
+                <option value="Professional">Professional</option>
+                <option value="Enthusiast">Enthusiast</option>
+            </select>
+        </div>
+        <div>
+            <label for="Recommend">Would You Recommend GFG to a friend? <br></label>
+            <input type="radio" name="Recommend" id="Recommend1">Yes<br>
+            <input type="radio" name="Recommend" id="Recommend2">No<br>
+            <input type="radio" name="Recommend" id="Recommend3">Maybe<br>
+        </div>
+        <div>
+            <label for="C C++ C# Python Javascript React Django React Angular Spring">Languages and Frameworks Known(Check All That Apply) <br></label>
+            <input type="checkbox" name="C">C <br>
+            <input type="checkbox" name="C++" id="C++">C++ <br>
+            <input type="checkbox" name="C#" id="C#">C# <br>
+            <input type="checkbox" name="Python" id="Python">Python <br>
+            <input type="checkbox" name="Javascript" id="Javascript">Javascript <br>
+            <input type="checkbox" name="React" id="React">React <br>
+            <input type="checkbox" name="Angular" id="Angular">Angular <br>
+            <input type="checkbox" name="Django" id="Django">Django <br>
+            <input type="checkbox" name="Spring" id="Spring">Spring <br>
+        </div>
+        <div>
+            Any comments or suggestions <br>
+            <textarea name="suggest" id="mysuggest" cols="50" rows="2"></textarea>
+        </div>
+        <div  class="TextArea">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+</html>

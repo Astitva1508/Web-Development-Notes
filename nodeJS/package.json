@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "nodemon": "^2.0.18",
+    "superheroes": "^3.0.0",
+    "supervillains": "^3.0.0",
+    "uuid": "^8.3.2"
+  },
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "An intro to backEnd via NodeJS",
+  "main": "npm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Astitva Dubey",
+  "license": "ISC"
+}

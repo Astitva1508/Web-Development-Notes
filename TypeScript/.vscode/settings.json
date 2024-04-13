@@ -1,0 +1,4 @@
+{
+    "typescript.tsdk": "C:/Users/astit/AppData/Roaming/npm/node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true
+}

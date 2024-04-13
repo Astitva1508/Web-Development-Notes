@@ -1,0 +1,13 @@
+<%- include('header') -%>
+    <h1>Congratulations on being here.You are among the one percent people in the world</h1>
+    <h1><%= todayFormatted %></h1>
+    <ul>
+        <% items.forEach((item)=>{ %>
+            <li><%= item %></li>
+        <% }) %>
+    </ul>
+    <form action="/" method="post">
+        <input type="text" name="newItem">
+        <button type="submit" name='list' value="<%= list %>">Go</button>
+    </form>
+<%- include('footer') -%>

@@ -1,0 +1,38 @@
+Types of Data Relationships:
+1. One to Many
+2. Many to Many
+3. One to Many
+4. One to Squillions
+
+//Keep the query in mind.
+//
+
+When to use Subdocumemts
+all cases of 1-1 can be handled with sub-documents
+
+Put as much in as possible
+The joy of a Document database is that it eliminates lots of Joins. Your first instinct should be to place as much in a single document as you can. Because MongoDB documents have structure, and because you can efficiently query within that structure (this means that you can take the part of the document that you need, so document size shouldn't worry you much) there is no immediate need to normalize data like you would in SQL. In particular any data that is not useful apart from its parent document should be part of the same document.
+
+Separate data that can be referred to from multiple places into its own collection.
+This is not so much a "storage space" issue as it is a "data consistency" issue. If many records will refer to the same data it is more efficient and less error prone to update a single record and keep references to it in other places.
+
+Is your app read or write heavy
+
+If an object can exist independently of the parent, then you will want to access it even if the parent doesn't exist. As you just can't embed it in a non-existing parent, you have to make it live in it's own data structure. And if a parent exist, just link them together by adding a ref of the object in the parent.
+
+What data is frequently accessed together?
+
+However, it's important to note that data duplication should not be avoided if it results in a better schema.
+
+Rule 1: Favor embedding unless there is a compelling reason not to.
+Rule 2: Reference it only if you need to access it on its own, it's too big, I rarely need it
+Rule 3: Arrays should not grow without bound. If there are more than a couple of hundred documents on the "many" side, don't embed them; if there are more than a few thousand documents on the "many" side, don't use an array of ObjectID references. High-cardinality arrays are a compelling reason not to embed.
+
+Further Reading: https://www.mongodb.com/developer/products/mongodb/mongodb-schema-design-best-practices/
+Further Reading: https://www.mongodb.com/blog/post/building-with-patterns-a-summary
+
+One-to-One - Prefer key value pairs within the document
+One-to-Few - Prefer embedding
+One-to-Many - Prefer embedding
+One-to-Squillions - Prefer Referencing
+Many-to-Many - Prefer Referencing

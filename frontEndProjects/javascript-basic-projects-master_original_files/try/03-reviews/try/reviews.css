@@ -1,0 +1,58 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Roboto", sans-serif;
+}
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+main{
+    display:flex;
+    justify-content:center;
+    place-items:center;
+    flex-direction:column;
+}
+h1{
+    margin-top:20vh;
+}
+.underline{
+    width:10vw;
+    border-bottom:3px solid black;
+    margin-bottom:3px;
+}
+.rev{
+    display:flex;
+    justify-content:center;
+    place-items:center;
+    flex-direction: column;
+    width:50vw;
+    margin:auto;
+    border:1px solid black;
+}
+
+img{
+    width:15vw;
+    height:15vw;
+    border-radius:15vw;
+}
+.name{
+    font-size: 1.25rem;
+}
+.text{
+
+}
+
+.job{
+    font-size:1rem;
+    color:blue;
+    font-weight:bold;
+}
+
+button{
+    background:none;
+    padding:5px;
+    margin:5px;
+    border:none;
+}
+
+i{
+    color:blue;
+}

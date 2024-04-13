@@ -1,0 +1,16 @@
+EveryDay implement one utility Proejct:
+
+1. Google verification trhu official docs and how to store that data in the backend
+2. OTP verification from Amazon Platform
+3. Socket.Io (Whatsapp Clone)
+4. RazorPay && Stripe Payment Integration 
+5. Autofill your current location
+5. Update push to email functionality
+6. Chrome Extension
+
+Three things:
+1. Make it work then optimize it
+2. Always think of the first version
+3. Kucch na Kucch jugaad to hoga hi
+
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <h2>Welcome to our first Web Application</h2>
+    <form action='/' method="post">
+<!-- method="post" implies we are sending this data somewhere and where? is defined by the action attribute 
+To send it to the server , use action = "/" or else dont mention it and 
+the form will by default send the data to the current page where its on -->
+        <input type="text" name="num1" placeholder="First Number"> 
+        <!-- name attribute is equivalent to a variable name and is gonna uniquely identify data inside the input tag -->
+        <input type="text" name="num2" placeholder="Second Number">
+        <button type="submit" name="submit">Calculate</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+body{
+    background-image:radial-gradient(circle,skyblue,white);
+}
+header{
+    width:600px;
+    display:grid;
+    margin:auto;
+    /* grid-template-columns: repeat(1,auto); */
+    /* font-size:3em; */
+    /* border:3px  solid   rgb(89, 89, 101); */
+    margin-bottom:10px;
+    justify-content: center;
+}
+header h1{
+    /* border:3px solid green; */
+    margin:auto;
+    text-align:center;
+    font-size:3em;
+}
+
+section{
+    width: 600px;
+    margin:auto;
+    /* background-image:radial-gradient(circle, red, yellow, green); */
+    display:grid;
+    grid-template-columns: repeat(2,auto);
+    grid-gap:2rem;
+    justify-content:center;
+}
+
+.name{
+    /* border:2px solid black; */
+    text-align: center;
+    font-family: 'Akshar', sans-serif;
+    font-weight:bold;
+    font-size:2rem;
+}
+
+.image{
+    /* border:2px solid red ; */
+    align-content: center;
+    margin:5px 5px;
+}
+
+footer{
+    width:600px;
+    display:grid;
+    margin:auto;
+    text-align: center;
+    font-size:2em;
+    font-weight:bold;
+}

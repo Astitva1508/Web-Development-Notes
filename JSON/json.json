@@ -1,0 +1,17 @@
+{
+    "person":[
+        {
+            "name":"Astitva",
+            "age":19
+        },
+        {
+            "name":"Ashish",
+            "age":21
+        },
+        {
+            "name":"Vaibhav",
+            "age":21
+        }
+    ]
+}
+

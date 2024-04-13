@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: url() no-repeat center center/cover;
+        }
+        .container{
+            visibility: hidden;  /*hidens the element but its space remains as it was*/
+            display:none; /*hidens the element and its space is also erased*/
+            z-index:-1;
+            /* z-index decides that when two elements overlap then kaun sa element upar dikhega and it works only for elements with position element absolute,relative,fixed,sticky.Jis element ko peeche dhakelna hai usko z-index negative de do.Otherwise , the element with higher value of z-index upar aa jaega*/
+        }
+        .flex-box{
+            display:flex;   /*To assign a container ass flexbox and its contents become flex-items*/
+            flex-direction: column-reverse;
+
+            flex-wrap: wrap;  /* Taaki element screen size change karne par wrap ho */
+            flex-flow: row-reverse wrap;  /* shorthand to write flex-direction: and flex-wrap: together; */
+
+            /* justify-content:space-between center space-around space-evenly;  */
+            /* justify-content will justify the content in horizontal direction  */
+            /* space-evenly me har dabbe ke around baraabar space aa jaegi....also try and test all these rather than theory */
+            
+            /* align-items: center flex-end flex-start stretch; */
+            /* align-items will justify the content in vertical direction  */
+            /* stretch property select karne se vertically even space bana leta hai */
+        }
+
+        .flex-item{
+            /* order: */  /* Jiska order jitna bada wo utna last me jaega */
+            /* flex-grow: ; jiska flex grow jitna jyaada wo element screen badi hone par utni hi tezi se badhega.Use of negative numbers are invalid*/
+            /* flex-shrink: ; jiska flex shrink jitna jyaada wo element screen chhoti hone par utni hi tezi se ghatega */
+            /* All the above three properties are used to target individual itmens
+            */
+
+            /* flex-basis:; to change the default size of any item
+            When flex-direction is set to row then flex basis will control width
+            When flex-direction is set to column then flex basis will control height */
+
+            /* flex;; is the shorthadn for flex-grow: ; flex-shrink; and flex-basis:; used together */
+
+            align-self:flex-end flex-start center;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+
+KanNotes
+1. div.box#box$*4 creates 4 div with class box and id 1 2 3 4.
+2. Use of opacity to make somme content more visible than other 

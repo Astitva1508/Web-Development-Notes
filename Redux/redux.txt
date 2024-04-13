@@ -1,0 +1,45 @@
+Redux is an app level state management library
+
+Redux library is responsibe for storing our data and giving us methods to update the data
+
+React-Redux library is connect redux store to the react application
+
+Store is a single piece of truth or a global state is the react app.
+The way it all works : Store->UI->Action->Reducer->Store
+const store=createStore(reducer,initialState)
+store.getState() returns the initial state
+store.dipatch(action)
+Hence Store is nothing but {getState,dispatch}
+
+How do we update the store? By dispatching an action
+
+reducer function is used to update the state.It takes two arguments:state and action.
+
+dispatch method sends actions to the store
+action are objects which must have a type property
+
+Dont ever mutate the state because redux is built on immutability
+
+While checking for action types , For the default case , always make sure to return the old state otherwise functionality will go bananas
+
+In a professional approach , we dont use store.getState and store.dispatch but use react-redux to connect our application to the store.
+react redux provides Provider(wraps the app) and connect(used in components to access the info).Info refers to the current state and dispatch method
+Connect is a higher order component i.e it returns the component.
+connect() (Component)
+connect has two arguments-> mapStateToProps and mapDispatchToProps.Both are functions
+
+//mapStateToProps has access to the state.Whatever this function returns is the prop of the component.It also returns a dispatch method.
+//Essentialy we are also mapping our dispatch function to dispatch props
+
+//mapDispatchToProps also has two parameters:dispatch and ownProps.The forst method used to dispatch the actions while the second parameter contains the components props
+
+//Concept of Action Creators:
+
+See in the store , we have the initial states and the reducers.
+Now in the code we can connect to the store and use two methods: 
+    1. mapStateToProps
+    2. mapDispatchToProps
+using mapDispatchToProps , we return methods to dispatch actions
+What we can do is to setup the functions that always returns a particular type(and we can also pass payload).Basically it is a function that returns the action object
+
+Redux Dev Tools:

@@ -1,0 +1,22 @@
+body{
+    background-color: green;
+}
+
+div{
+    margin: 0px auto;
+    width:400px;
+    box-sizing: border-box;
+    line-height: 1.6em;
+    background-color: white;
+    padding:6px;
+}
+
+h2{
+    margin:auto auto 6px auto ;
+    width: 400px;
+
+}
+
+.TextArea{
+    text-align:center;
+}

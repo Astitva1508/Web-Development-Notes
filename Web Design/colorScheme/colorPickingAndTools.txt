@@ -1,0 +1,17 @@
+Tools
+ColorSpace
+AdobeColor
+
+
+
+Pick only Black and White(or any 2 colours)
+Pick one more additional colour that is somewhere on the image
+Pick one more additional colour that is complementary to colour somewhere on the image
+Pick one more additional colour rather its gradient
+Pick two shades of same colour that vary slightly but variation is clearly visible
+Dont pick two colors shades that are almost the same
+Also dont Pick two different colours that are almost the same
+Pick two colours(complementary,maybe) and use one to highlight important stuff and one to show all the content(Alongside its variations i.e shades or alongside black and white)
+
+Question Ask:
+Do you want entirely contrasting colours or colours that bend in a little bit

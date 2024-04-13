@@ -1,0 +1,11 @@
+npm init -> to initialize a package file
+npm install (package name) -> to install the package name
+require it inside  the project using require 
+
+
+
+
+
+
+
+Json is simply a file format used to organize data similar to Javascript Objects(key:value pairs).

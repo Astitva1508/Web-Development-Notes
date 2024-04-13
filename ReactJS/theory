@@ -1,0 +1,161 @@
+We always create a div html element with id 'root' inside which we insert everything we create using react
+
+reactDOM.render(what to show , where to show, callback)
+
+JSX enables us to insert HTML inside JS files .
+Babel is a JS compiler that comes along with React Module and converts modern JS into one understandabe by browser
+
+to insert JS inside JSX , use {}
+
+to make sure that JSX uploads without any warnings , use type = text/JSX in importing js file in HTML 
+
+JSX -> attributes are camelcased
+attribute class changes to className 
+contentEditable='true' enables us to edit contents on the browser side
+
+Inline CSS in JSX:
+style attribute should be a JS object and for JSX to understand JS we need set of {} which ultimately results in 2 sets of {{}}. This is useful when we want styles for certain JS elements to update on the fly depending on the conditions
+const customStyle= {
+    color:'red',
+    fontSize:'20px'
+    border:'3px solid red'
+}  //Thats how we create inline CSS
+To change inline CSS on the go , use customStyle.color='Blue'
+
+Self Closing Tags denoted by <Heading />
+
+react scripts are the scripts needed for running react apps locally on your computer
+
+HTML attributes can only be applied to HTML elements, even if its inside te JSX.We cant apply HTML attributes to the custom Style elements
+
+For custom React elements , we can define properties and these are called props
+We can have <Card name='Kucch Bhi'/> and this way , we have a property called name for our Card react component.All these custom attributes sent to the function definition inside props object(props is the parameter for the function)
+
+Those elements which dont have any childs are self closing
+
+Whatever is to remain the same should be inside the react component defined.Things that are to be customised should be inside the props object
+
+React Dev Tools help you see the structure of your code as well as the values of the properties
+
+Whenever u find yourself creating the same thing again and again.then seperate it into a React component and have properties passed to it to render custom pieces of information.Note that all the custom components rendered using a loop should have a key property uniquely attached to then
+
+We can place functions returning JSX inside JSX code
+Any list than contains JSX code can be placed inside the JSX 
+
+Other Important Aspects-> 
+How to handle user inputs
+Dynamically adding and deleting data from the user input 
+Dealing with forms
+
+Conditional Rendering done using && and ternary operators
+What to pass in the ternary operator when the consition is false? null
+Even better way ->use syntax -> <Condition and (Expression)>.If the condition evaluates to true , then expression is returned.else in case of false , flow of control doesnt reach the expression
+
+User Interface is a function of State of the React components
+
+Declarative Programming is when we are declaring while writing our code how user  interface should look under different conditions dependent upon the state. 
+Up until now , we only did imperative programming 
+Imperative Programming is getting hold of an item and setting its property to something else each time some event is triggered.Note that we get hold and then change the property .Its not like we change the variable and UI automatically gets changed 
+
+React hooks allows us to change the state variable dynamically which in turn changes the UI.Otherwise . changing the state variable on its own does not change the UI because components are being rendered and for the changes to be reflected , components need to be re-rendered.
+
+React Hooks can only be used inside functional component and not anywhere(functional component is a function that renders a component)
+
+useState() returns an array of two values.First is the value of state and other is a function that determines what to do with the value of state.Whenever we change the state(thru the function) , it automatically gets reflected in the UI.To change the state thru the function , simply pass the value you want the state to have ,as argument to the function.
+Note:function App() {
+
+  let [count,setCount]=useState(0)
+  const increase=()=>{setCount(count+1)}
+  const decrease=()=>{setCount(count-1)}
+  return <div className="container">
+  <h1>{count}</h1>
+  <button onClick={increase}>+</button>
+  <button onClick={decrease}>-</button>
+</div>
+}
+
+On clicking the + button , not only the value of state changes from 0 to 1 , also the value of count changes to 1 (even though we are not using count+=1.Why?
+kyonki state ki value initially wo ho jo useState ke andar pass kari hai.Then wo hoti h jo function ke andar pass kri hai)
+
+useState keeps track of change in state.
+
+concept of Controlled Components
+
+If we click on a button{type=submit} inside a form component,then by default the event onSubmit of the form gets triggered.On clicking any button inside the form , the page refreshes.
+
+Warning : Dont try to set event or anything related to event object inside the stateful setter //Concept of Synthetic Event
+
+https://stackoverflow.com/questions/11508463/javascript-set-object-key-by-variable?noredirect=1&lq=1
+
+Note: We cant modify our props.However , if we try to assign props varibale to an object inside the code itself , then it works.However , props aren't modified as such(you can see that in developer tools)
+
+Obvious si cheez
+Dont direcly pass function calls to the eventListeners such as onChange etc. They get called as soon as the code is rendered.Instead pass them instead an arrow function.These functions want a function not a function call
+
+Reasons for using Material-UI ? because it has CSS , HTML and Js all merged into the same React component.Whereas in case of BootStrap etc , it has only CSS
+
+To Host your front-end for others to see (on Netlify) :
+run command -> npm run build
+
+
+
+
+//Hooks always start with the word 'use'.This alao applies to whatever hooks we create later on
+//Components where we invoke Hooks must be uppercase
+//We cannot invoke hooks conditionlly
+
+Note:
+If we provide same value to the set{} function of useState , then it does not re-render the component
+
+//UseEffect ->
+It allows you to do the side effects i.e. any work outside of the components(e.g Changing document title , signing up for subscriptions , fetching data ,setting up an Event Listener )
+it by default runs after every re-render
+First argument is the callback which runs after every re-render
+Second argument is the list of dependencies->
+    if we provide [] , useeffect only runs on the initial render
+useEffect cleanUp function : see John Smilga video
+//We should not update the value of setValue inside useEffect coz then it leads to an infinite loop
+//We should not add EventListeners inside the Component body otherwise everytime the function re-renders , a new EventListener(viz exactly the same) will be added.
+//with useEffect we also have an option of returning the function.Whatever we pass as the return function will be invoked once we exit i.e //What this return function does is : Before we execute the re-render and call the useEffect one more time , it runs this function 
+//CleanUp function is important when dealing with components that are appearing and disappearing
+//Each and every time you setup a useEffect , also set up a cleanUp function
+//You cannot make the callback function of useState async/await bcoz they return a promise while useEffect returns a cleanUp function
+
+//Short Circuit:
+const firstValue = a || b .If a is false , returns b.else returns a 
+const secondValue= a && b .If a is true , returns b.else returns a 
+
+We can use OR operator to show a default value inCase we dont have the firstValue
+We can use AND operator to set up a condition for showing or hiding the component
+
+In Forms , we also have option of using uncontrolled Inputs and we do that using the useref hook
+useRef hook used to target the DOM Element and then setup the uncontrolled input(similar to how we will have it in JavaScript)
+Key things about useRef
+// preserves value
+// DOES NOT trigger re-render
+// target DOM nodes/elements
+
+//UseReducer Hook:
+//used when we have a more complex setup. It adds more structure to your state.
+//useReducer especially useful when we want to update the state in a certain way .
+//Syntax:
+const [state,dispatch] = useReducer(reducer)
+each and every time we want to do something with the hook state , we use dispatch and then its gonna go through the reducer function
+//Reducer function takes in the state and the action and then returns the new state
+//In order to affect anything in our state, we need to dispatch it .
+//we need to call the dispatch function with an object having property type
+//from reducer we must return some kind of state
+//The object that we passed in the dispatch is accesible as action inside reducer 
+//The previous state of is accesible as state inside reducer
+
+//In reducer , we dont directly affect the state.
+//Its a better practice to throw an error inside reducer if all the test cases fail.So that we can know that we are dispatching an action which is not being dealt with in the reducer
+
+//Prop Drilling -> Google //Solution:Context API and useContext hook
+
+//Context API and useContext
+const xContent = React.createContext();
+now we have access to two components -> Provider and Consumer
+//Mostly we cover our whole application in the context provider
+
+//Custom Hooks allow us to reuse the functionality (e.g fetching local data , saving to local storage data)

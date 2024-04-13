@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            color:red;
+        }
+        .child{
+            color:red;
+            /* font-size:3em; implies font-size is thrice that of the parents font-size; */
+            /* padding:3em;  implies padding is thrice that of parent font-size: if childs font-size not set...else it is thrice  that of childs font-size */
+
+            /* rem unit works relative to root-html */
+
+            /* height:100vh; takes the complete height of the visible screen. x vh is x% of veiwport height*/
+            /* width:100vw; takes the complete width of the visible screen */
+        }
+        
+        @media only screen  and (max-width:500px) and (min-width: 300px){  
+/* Using  MediaQuery we can inject specific CSS into the page as we resize the width of the page  */
+/* Syntax to use mediaquery is to write @media followed by conditions inside parentheses and desired css inside it.Use mediaquery inside style tag only. */
+
+/* only screen used jab ham wo devices ko support nahi karna chahte jo baaki media types ke liye bane hain. Read Article on Media Types*/
+            #box1{
+                display:visible;
+            }
+        }
+
+        /* div p{} applies css to all p inside div
+        div >p applies css to only direct child p inside div
+        div+p applies css to those p jiska picchla element(not nested) div hai */
+
+        Attribute and nth Child Pseudo selector
+        input[type= "text"]{
+            /* This pseudo selector selects only that input whose type is text  and hence this selector targets the attribute*/
+            color:red;
+        }
+        a[target]{
+            /* This pseudo selector selects only that anchor  tag whose target value is specified */
+            color:red;
+        }
+        li:nth-child(3){
+            /* This targets the 3rd child of li */
+            color:red;
+        }
+        li:nth-child(2n+0){
+            /* This targets every second child , n begins from 0*/
+            color:red;
+        }
+        li:nth-child(odd){
+            /* This targets all odd childs , similarily even*/
+            color:red;
+        }
+
+        /* Before And After Pseudo-Selectors */
+        .box::before{
+            /* used to apply css before box; ye alag se dabbe nahi khaate */
+            content: "This is the content inserted before box ";
+
+            /* one specific usage- sabse upar i.e header::before me background image insert kar do and then position it to absolute and set its width and height and z-index=-1  */
+        }
+
+        .boxshadow_and_textshadow{
+            color:red;
+            /* box-shadow: offset-x offset-y color;  is the syntax value in x and y can be negative as well...then shadow upar chali jayegi */
+            /* box-shadow: offset-x offset-y color blur-radius color;
+            box-shadow:offset-x offset-y blur-radius spread-radius color; inset se shadow andar ki taraf jayegi*/
+            /* rgba() can be used in color where alpha decides ki color kitna dark hoga  */
+            /* box-shadow: inset offset-x offset-y blur-radius spread-radius color; inset se shadow andar ki taraf jayegi */
+            /* for multiple shadows, box-shadow ke andar ccomma seperated list laga denge */
+
+            /* similarily use text-shadow as  */
+            /* text-shadow:  offset-x offset-y blur spread color; */
+            /* When to use Text-Shadow?e.g image hai aur uspe  text nahi dikh raha hai to halki light text-shadow daal denge.similarily use box-shadow e.g if box-border and background have same color then using box-shadow we can make the box look visible(and classy)*/
+        }
+        .css_variables_or_custom_properties{
+            color:red;
+            /* To make a variable of name box-color to store background-color initialize it with -- i.e. */
+            --box-color:red;
+            /* now we can set */
+            background-color: var(--box-color);
+            /* Its important to know the scope of variables. Its scope is local */
+            /* To make global variables: at the type of stylesheet write :root{ } and define the variables inside it */
+            /* Generally we define colors as primary color and secondary color inside root */
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+
+Ways to make a responsive design:
+1. Setting up the viewport.
+2. Using max-width/max-height. 
+3.Using CSS MEdia Queries. (give an option to resize specific elements as size of screen changes)
+4.Using rem/vw/vh units over pixels.

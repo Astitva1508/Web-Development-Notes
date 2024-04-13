@@ -1,0 +1,38 @@
+Ctrl+U -> to delete the current command 
+Ctrl+A -> to go at the beginning of the current command
+Ctrl+E -> to go at the end of the current command
+
+cd (Name of the directory)/(Name of the next directory)/    ->  and so on and so forth   (press Tab to autoComplete)
+cd ~ -> to go to root directory
+cd ../.. -> to go backwards else type the whole path from root as to where you want to go(cd C:/Users/astit and so on and so forth)
+
+ls -> to show list of all the directories inside the current directory
+ls -list
+ls -a -> to show secret files and folders
+
+To edit any command in between : 
+    Way 1 : use left arrow
+    Way 2 : Hold down ALt and click where you want to edit
+
+mkdir Astitva -> to open a directory named Astitva in the current folder
+mkdir .Astitva -> to create a secret directory named Astitva
+touch text.txt(name.extension) -> to create a file  with a given extension
+start text.txt -> to open a text file
+code text.txt -> to open a text file with specified editor(VS Code here)
+rm text.txt -> to delete the specified text file
+rm * -> to delete all files inside the current directory
+rm -r Astitva/ -> to remove Astitva folder inside the current directory
+node fiename.js -> to open the file filename.js with node
+node -> to enter NODE REPL
+Inside NODE REPL , if you dont want to write the whole of command , simply type con and press Tab twice to see a whole range of possibilities.(Similarily , to see all functions to a console , console. and press Tab)
+
+.exit or Ctrl+C twice -> to exit the command line for NODE REPL 
+clear -> to clear the console
+
+To know your current directory:
+    1. General way (mltb dekhkar)
+    2. pwd
+
+Ctrl+C usually gets out of any process that you are running at the time
+
+To open a folder with Code ,  Be inside the folder and write command -> code .

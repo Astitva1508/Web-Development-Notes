@@ -1,0 +1,6 @@
+We can create a file called tsconfig.json to control how typescript works, what it reports and where your files are compiled to ...
+
+tsc --watch <filenme> watches the file for any errors
+
+Way to create a config file : tsc --init
+When using typescript with react , we dont need to use PropTypes

@@ -1,0 +1,7 @@
+typing npm install -> installs all the dependencies listed in the package.json
+It is iseful while transferring files from one system to another because we usually dont send node_modules folder so all the npm modules need to be reinstalled
+
+dev dependencies are dependencies needed for development 
+to install a dev dependency, use command->
+    npm install --save-dev nodemon  OR
+    nom install -D nodemon

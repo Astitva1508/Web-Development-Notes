@@ -1,0 +1,15 @@
+Incorporating Jquery using CDN : 
+Google CDN is most popular.
+Use its link : 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+Make sure to insert Jquery src at the end of body and above all the other script tags
+
+In case you want to insert the script tag inside head , then 
+insert script tag for jquery first
+then insert script tag for your own js
+and inside your own js , write 
+    $(document).ready(function(){
+        //Type all the JS
+    })
+This makes sure that JQuery library has finished loading before we try to access it .

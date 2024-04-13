@@ -1,0 +1,54 @@
+data folder is where mongoDB saves our data on the local system
+
+PATH-> C:/ProgramFiles/mongoDB/Server/5.0
+
+To open mongo.exe and mongod.exe straight from the hyper terminal using bash -> Create a hidden file called .bash_profile  in the home directory which is going to tell the terminal that when it starts up and we want to access mongo and mongod , we have a shortcut for it. 
+
+type mongod on the hyper terminal to get started and perform CRUD.The last line of message 'Waiting for connnections port :27017' viz analogous to localhost:3000 but here we got a local database being served up on this particluar port.This terminal is connnected to MongoDB database and now we open a new terminal  and type mongo to get to the mongo shell.
+
+
+help in mongo to see all the possible command that you can use in the mongo shell
+
+
+Commands in the mongo shell:
+
+1. show dbs -> to see the databases present
+
+CRUD Operations in MongoDB
+
+2. use <name_of_database> -> to create a database with the desired name
+
+3. db-> to know which database you are currently in
+
+4. show collections-> to show all the collections(tables) of a given database
+
+5. db.<collection_name>.insertOne({<JS_Object>}) -> to insert a new row(formally called document) into the table(formally called collection)
+
+6. db.<collection_name>.find() -> to read data
+
+7. db.<collection_name>.find({name:"Arihant"})  -> returns all the documents where the name field is equal to 'Arihant'
+
+8. db.<collection_name>.find({_id:{$gt:1}}) -> returns all the documents where id field is greater than 1.
+
+9. db.<collection_name>.find({id:{$gt:1}},{name:1}) -> returns the name field  of all the documents where id field is greater than 1.(Note that while using find method , _id field always comes back by default unless set to false explicitly)
+
+10. db.<collection_name>.updateOne({query criteria that specifies which document we want to update },{$set:{room:"A-106"}})
+
+11. db.collection_name.deleteOne({JS Object})
+
+
+//We can add a number of things to a single field  using [] and an embedded document inside []
+e.g db.users.insert({
+    name:'Vaibhav Pandey',
+    _id:4,
+    reviews:[{
+        name:'Rohit',
+        rating:5
+    },{
+        name:'Sachin',
+        raitng:4
+    }],
+    journey:{name:'A',age:19}
+    })
+
+    

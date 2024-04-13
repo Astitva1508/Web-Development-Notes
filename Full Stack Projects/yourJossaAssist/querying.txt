@@ -1,0 +1,22 @@
+FIND Operations:
+
+const IITB = await Round6.find({Institute:'Indian Institute  of Technology Bhubaneswar'}).exec()
+// General Syntax: const IITB = await Round6.find({ <field1>: <value1>, ... }).exec()
+
+
+const IITB = await Round6.find(
+    {
+        Institute:'Indian Institute  of Technology Bhubaneswar',
+        AcademicProgramName:{$eq:"Civil Engineering (4 Years, Bachelor of Technology)"}
+    })
+
+//General Syntax: { <field1>: { <operator1>: <value1> }, ... }
+//Alternatively, we can do this 
+const IITB = await Round6.find({Institute:'Indian Institute  of Technology Bhubaneswar'}).where('AcademicProgramName').equals('Civil Engineering (4 Years, Bachelor of Technology)')
+
+QueryOperators:$in,$eq,$gt,$lt,$lte,$match,$limit
+
+Other Query Possibilities: .distinct,.where,.equal,
+
+
+

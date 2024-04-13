@@ -1,0 +1,58 @@
+Regex Expressions enclosed bewtween //
+
+/a|b|code/ to match a or b or code 
+
+i flag to ignore case based matching
+
+g flag to search/extract pattern more than once 
+
+Widlcard Character:  /hu./ matches for hua, hub, huc and so on
+Note: The wildcard character (.) will match any one character.
+
+[] ke andar likha content apne aap me ek character hai 
+
+/b[aiu]g/ matches for bag , big and bug
+
+/[a-e]at/ matched for aat,bat,cat,dat,eat 
+/[0-5]/ matches any number between 0 and 5, including the 0 and 5
+/[a-z0-9]/ig matches for any character or number
+/[^aeiou]/gi matches all characters that are not a vowel.
+/a+/g matches for one or more appearance of a 
+/a*/g matches for zero or more appearance of a
+
+Lazy Matching(?):
+/t[a-z]*?i/ applied to Titanic returns Ti 
+/t[a-z]*i/ applied to Titanic returns Titani 
+lazy match finds the smallest possible part of the string that satisfies the regex pattern.
+
+/a+/ matches to return the longest continous occurence of a
+
+Outside of a character set, the caret is used to search for patterns at the beginning of strings.
+/^Astitva/ matches for Astitva at the beginning of string
+
+/story$/ matches for story at the end of string
+
+\w = [a-zA-Z0-9_]
+\W = [^A-Za-z0-9_]
+\d = [0-9]
+\D = [^0-9]
+\s =  [ \r\t\f\n\v]
+\S =  [^ \r\t\f\n\v]
+
+Specify upper and lower number of matches using {}
+/a{3,5}h/ matches aaah,aaaah,aaaaah
+
+/colou?r/ checks for colour and color. It treats the previous symbol as optional
+
+
+LookAhead Operator : Lookaheads are patterns that tell JavaScript to look-ahead in your string to check for patterns further along. This can be useful when you want to search for multiple patterns over the same string.
+A positive lookahead will look to make sure the element in the search pattern is there, but won't actually match it. A positive lookahead is used as (?=...) where the ... is the required part that is not matched.
+On the other hand, a negative lookahead will look to make sure the element in the search pattern is not there. A negative lookahead is used as (?!...) where the ... is the pattern that you do not want to be there. The rest of the pattern is returned if the negative lookahead part is not present.
+
+/P(engu|umpk)in/g checks for Penguin and Pumpkin (understand the importance of parenthesis in grouping of words)
+
+Capture groups can be used to find repeated substrings.
+
+ToDo: LookAhead Operator , Capture Groups
+
+https://stackoverflow.com/questions/4736/learning-regular-expressions

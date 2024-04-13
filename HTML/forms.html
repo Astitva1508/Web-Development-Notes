@@ -1,0 +1,94 @@
+<!-- In this tutorial we have learnt the following: 
+
+Form Tag (and action attribute)
+<form action=""></form>
+
+Input Tag and its Types (name and id attributes)
+<input type="text">
+<input type="number" name="" id="">
+<input type="checkbox" name="" id="">
+<input type="date" name="" id="">
+<input type="email" name="" id="">
+<input type="radio" name="" id="">
+<input type="reset" value="">
+<input type="submit" value="">
+
+Label Tag
+<label for=""></label>
+
+TextArea Tag
+<textarea name="" id="" cols="30" rows="10"></textarea>
+
+Division Tag
+<div></div> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h2>This is HTML Forms Tutorial</h2>
+    <form action="backend.php">
+        <div> <!--It is an block element-->
+            <label for="name">Name:  </label>
+<!-- for me wo id aati hai jiska label hai i.e id wahi honi chahiye joki for ke andar di hai-->
+            <input type="text" id="name"> 
+            <br>
+        </div> 
+<!-- To break line , use br or div tag -->
+        <div>
+            Roll: <input type="text" name="Roll">
+            <br>
+        </div>
+        <div>
+            Email: <input type="email" name="Myemail" >
+<!-- name wo naam hai jisse aapka backend is tag ko pehchaanega i.e backend me tareeka hoga Myemail ki value ko lene ka #More on this in backend -->
+<br>
+        </div>
+        <div>
+            Date: <input type="date" name="Mydate" id="">
+            <br>
+        </div>
+        <div>
+            Bonus: <input type="number" name="MyBonus">
+            <br>
+        </div>
+        <div>
+            <label for="elg">Are You Eligible?: </label>
+            <input type="checkbox" name="MyEligibility" id="elg" checked>
+            <br>
+        </div>
+        <div>
+            Gender:Male <input type="radio" name="MyGender"> Female<input type="radio" name="MyGender">
+            <!-- Since both radio have same name as MyGender , We can only select one of those.This is true for any such radio(or checkbox) types -->
+            <br>
+        </div>
+        <div>
+            Write About Yourself: <br> <textarea name="MyText" cols="30" rows="10"></textarea>
+            <br>
+        </div>
+        <div>
+            <input type="submit" value="Submit Now">
+            <br>
+        </div>
+        <div>
+            <input type="reset" value="Reset">
+        </div>
+        <div>
+            <label for="car">Car</label>
+            <select name="MyCar" id="car">
+                <option value="Ind" selected>Indica</option>
+                <option value="Suz">Suzuki</option>
+                <option value="BMW">BMW</option>
+                <option value="Ferrari">Ferrari</option>
+            </select>
+        </div>
+    </form>
+
+<!-- write the source of backend file in form's action attribute -->
+</body>
+</html>

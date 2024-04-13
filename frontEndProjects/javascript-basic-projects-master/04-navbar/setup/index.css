@@ -1,0 +1,12 @@
+nav{
+    display: grid;
+    grid-template-columns: 3fr 4fr 2fr;
+}
+
+li{
+    list-style-type: none;
+    float:left;
+    border:3px solid red;
+    padding:4px;
+    margin:4px;
+}
